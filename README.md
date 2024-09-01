@@ -29,10 +29,8 @@ Depois, é só escolher o ícone que mais gosta e usá-lo no seu código:
 
 ## Links Úteis
 - **Nosso site:** [xpainel Rental Code](https://xpainel.com.br/site)
-- **Logo do projeto:** [Baixe aqui](https://xpainel.com/site/images/main-logo.png)
 
 ## Contribua!
 Tem uma fonte de ícones nova ou algum feedback? Fique à vontade para abrir uma issue ou mandar um pull request. Vamos juntos deixar essa coleção ainda mais completa! 💪
 
-## Licença
-Este projeto está sob a licença MIT. Sinta-se livre para usar e abusar! 😉
+## Sinta-se livre para usar e abusar! 😉
