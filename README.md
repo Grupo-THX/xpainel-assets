@@ -24,7 +24,7 @@ Simples como andar de bicicleta! Basta adicionar o link CSS no seu projeto e com
 Depois, é só escolher o ícone que mais gosta e usá-lo no seu código:
 
 ```html
-<i class="fas fa-brain"></i> <!-- Exemplo com Font Awesome 5 -->
+<i class="fa fa-x-twitter"></i> <!-- Exemplo para o X (Novo Twitter)  Font Awesome para a rede social X 🙌🙌-->
 ```
 
 ## Links Úteis
