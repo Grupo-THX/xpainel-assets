@@ -1,36 +1,79 @@
 ![Logo do XPainel](https://xpainel.com/site/images/main-logo.png)
-# xPainel Rental Code Icons 🎨
+# xPainel Rental Code Icons
 
-Bem-vindo(a) ao repositório de ícones do **xPainel Rental Code**! Se você gosta de ícones estilizados e prontos para usar, está no lugar certo. 🎉
+Repositorio de assets CSS e fontes de icones usados no xPainel.
 
-## Sobre o Projeto
-Aqui você vai encontrar uma coleção incrível de fontes de ícones CSS para turbinar seus projetos web. Seja você um(a) desenvolvedor(a) que ama customizar cada detalhe ou alguém que só quer adicionar um toque especial ao site, essa coleção é pra você!
-
-### O que tem aqui?
-- **Font Awesome 5** - Aqueles ícones clássicos que todo mundo ama. 💻
-- **Font Awesome 4.7** - Para os nostálgicos de plantão. ☕
-- **Bootstrap Icons** - Simplicidade e elegância, direto do Bootstrap. ⚙️
-- **Boxicons** - Um toque moderno e minimalista. 🧠
-- **Ionicons** - Perfeito para quem curte ícones no estilo mobile. 📱
-- **Foundation Icons** - Aquele toque final para qualquer projeto. 🗻
-
-## Como usar
-Simples como andar de bicicleta! Basta adicionar o link CSS no seu projeto e começar a usar os ícones. Não precisa configurar nada complicado, só copiar e colar!
+## Uso rapido
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets/icons.css">
 ```
 
-Depois, é só escolher o ícone que mais gosta e usá-lo no seu código:
+## Padrao de organizacao de pastas
 
-```html
-<i class="fa fa-x-twitter"></i> <!-- Exemplo para o X (Novo Twitter)  Font Awesome para a rede social X 🙌🙌-->
+Sempre manter cada biblioteca no formato abaixo:
+
+```text
+fonts/{biblioteca}/{versao}/css/
+fonts/{biblioteca}/{versao}/fonts/
 ```
 
-## Links Úteis
-- **Nosso site:** [xpainel Rental Code](https://xpainel.com.br/site)
+Exemplo real (Remix Icon):
 
-## Contribua!
-Tem uma fonte de ícones nova ou algum feedback? Fique à vontade para abrir uma issue ou mandar um pull request. Vamos juntos deixar essa coleção ainda mais completa! 💪
+```text
+fonts/remixicon/4.9.1/css/remixicon.css
+fonts/remixicon/4.9.1/fonts/remixicon.woff2
+fonts/remixicon/4.9.1/fonts/remixicon.woff
+```
 
-## Sinta-se livre para usar e abusar! 😉
+Regra importante:
+- Nao criar pasta de biblioteca na raiz do repositorio.
+- CSS sempre em css/ e arquivos de fonte sempre em fonts/.
+- Preferir caminho relativo no CSS da propria biblioteca, apontando para ../fonts/.
+
+## Como adicionar uma nova fonte de icones
+
+1. Criar estrutura de pastas com nome da biblioteca e versao.
+2. Copiar CSS da biblioteca para a pasta css/.
+3. Copiar arquivos de fonte para a pasta fonts/.
+4. Ajustar urls no CSS da biblioteca para caminhos locais (sem depender de CDN externo).
+5. Adicionar import no arquivo icons.css.
+6. Commit e push no GitHub.
+7. Fazer purge no jsDelivr.
+
+## Exemplo de import no icons.css
+
+```css
+@import url('fonts/remixicon/4.9.1/css/remixicon.css');
+```
+
+## Purge no jsDelivr (obrigatorio apos push)
+
+Ferramenta:
+- https://www.jsdelivr.com/tools/purge
+
+URLs recomendadas para purge:
+
+```text
+https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets
+https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets/icons.css
+```
+
+E tambem as URLs da biblioteca adicionada. Exemplo Remix:
+
+```text
+https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets/fonts/remixicon/4.9.1/css/remixicon.css
+https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets/fonts/remixicon/4.9.1/fonts/remixicon.woff2
+https://cdn.jsdelivr.net/gh/Grupo-THX/xpainel-assets/fonts/remixicon/4.9.1/fonts/remixicon.woff
+```
+
+Observacao:
+- Se aparecer Throttled no purge, aguarde alguns segundos e tente novamente a mesma URL.
+
+## Checklist final
+
+- Estrutura de pastas padronizada
+- Import adicionado em icons.css
+- CSS da biblioteca apontando para arquivos locais
+- Push realizado
+- Purge executado
